@@ -113,18 +113,16 @@ class LinkedListTest {
         assertFalse("Should return false", list.remove("one"))
     }
 
-
-
-    /*
     @Test
     fun whenRemovingAnExistingElementTheSizeIsDecreased() {
         list.add("one")
         list.add("two")
         list.add("three")
 
+        list.remove("two")
+
         assertEquals("Size should be two", 2, list.size())
     }
-    */
 
 
 
