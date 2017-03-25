@@ -17,30 +17,34 @@ class LinkedList {
     }
 
     fun add(element: String) {
-        if (isEmpty()) {
-            val node : Node = Node(element, null, null)
 
-            val nodeIndex = size;
+        // Deciding the position of the new node
+        val nodeIndex = size;
 
-            elements[nodeIndex] = node
-            firstIndex = nodeIndex
-            lastIndex = nodeIndex
-
-            size++
-        }
-        else {
-            val lastNode = elements[lastIndex!!]
-
-            val nodeIndex = size;
-
+        // Locating the last node
+        if (!isEmpty()) {
+            // There is last node only if the list is not empty
+            var lastNode : Node? = elements[lastIndex!!]
+            // Linking the last node to the new, with the new as next
             lastNode!!.next = nodeIndex
-
-            val node : Node = Node(element, lastIndex, null)
-            elements[nodeIndex] = node
-            size++
-
-            lastIndex = nodeIndex
         }
+
+        // Creating the new node
+        // Pointing the new node to last node as previous
+        // Pointing the new node to nothing as next
+        val node : Node = Node(element, lastIndex, null)        // lastIndex will be null when list is empty
+
+        // Storing the new node
+        elements[nodeIndex] = node
+        size++
+
+        if (isEmpty()) {
+            // Pointing the new node as the first
+            firstIndex = nodeIndex
+        }
+
+        // Updating the lastIndex pointer to the new node
+        lastIndex = nodeIndex
     }
 
     fun clear() {
