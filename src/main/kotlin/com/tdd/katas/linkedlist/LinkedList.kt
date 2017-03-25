@@ -2,11 +2,11 @@ package com.tdd.katas.linkedlist
 
 class LinkedList {
 
-    private var empty : Boolean = true
+
     private var size : Int = 0
 
     fun  isEmpty(): Boolean {
-        return empty
+        return size==0
     }
 
     fun  size(): Int {
@@ -15,7 +15,6 @@ class LinkedList {
 
     fun  add(element: String) {
         size++
-        empty = false
     }
 
 }
