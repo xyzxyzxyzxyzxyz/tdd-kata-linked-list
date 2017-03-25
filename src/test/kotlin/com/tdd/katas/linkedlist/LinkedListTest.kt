@@ -37,10 +37,21 @@ class LinkedListTest {
     }
 
     @Test
+    fun whenAddingAnElementTheLinkedListShouldNotBeEmpty() {
+        val list : LinkedList = LinkedList()
+
+        list.add("one")
+
+        assertFalse("Should not be empty", list.isEmpty())
+    }
+
+    @Test
     fun whenCreatedTheLinkedListShouldHaveSizeZero() {
         val list : LinkedList = LinkedList()
 
         assertEquals("Should be zero", 0, list.size())
     }
+
+
 
 }
