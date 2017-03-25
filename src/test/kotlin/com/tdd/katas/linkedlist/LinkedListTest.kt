@@ -125,6 +125,17 @@ class LinkedListTest {
     }
 
     @Test
+    fun whenRemovingADuplicatedElementTheSizeIsDecreasedOnlyByOne() {
+        list.add("one")
+        list.add("one")
+        list.add("one")
+
+        list.remove("one")
+
+        assertEquals("Size should be two", 2, list.size())
+    }
+
+    @Test
     fun whenRemovingANonExistingElementTheSizeIsNotDecreased() {
         list.add("one")
         list.add("two")
@@ -143,8 +154,20 @@ class LinkedListTest {
 
         list.remove("two")
 
-        assertFalse("Size should be two", list.contains("two"))
+        assertFalse("Should not contain two", list.contains("two"))
     }
+
+    @Test
+    fun afterRemovingADuplicatedElementOnlyOneOccurrenceIsRemoved() {
+        list.add("one")
+        list.add("one")
+        list.add("one")
+
+        list.remove("one")
+
+        assertTrue("Still contains one", list.contains("one"))
+    }
+
 
 
 
