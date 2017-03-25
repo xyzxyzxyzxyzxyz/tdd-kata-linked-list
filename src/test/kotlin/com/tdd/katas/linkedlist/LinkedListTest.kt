@@ -83,4 +83,24 @@ class LinkedListTest {
         assertTrue("Should contain one", list.contains("one"))
     }
 
+    @Test
+    fun whenAnElementHasNotBeenAddedToTheListTheContainsMethodMustReturnFalse() {
+        list.add("one")
+
+        assertFalse("Should not contain two", list.contains("two"))
+    }
+
+
+    /*
+    @Test
+    fun whenAddingTwoElementsTheyMustBeContainedInTheList() {
+        list.add("one")
+        list.add("two")
+
+        assertTrue("Should contain one", list.contains("one"))
+        assertTrue("Should contain two", list.contains("two"))
+    }
+    */
+
+
 }
