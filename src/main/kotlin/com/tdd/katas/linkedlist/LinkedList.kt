@@ -75,7 +75,7 @@ class LinkedList {
     }
 
     fun remove(element: String): Boolean {
-        return true
+        return contains(element)
     }
 
 }
