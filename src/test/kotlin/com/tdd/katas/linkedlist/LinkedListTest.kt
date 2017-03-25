@@ -124,6 +124,17 @@ class LinkedListTest {
         assertEquals("Size should be two", 2, list.size())
     }
 
+    @Test
+    fun whenRemovingANonExistingElementTheSizeIsNotDecreased() {
+        list.add("one")
+        list.add("two")
+        list.add("three")
+
+        list.remove("four")
+
+        assertEquals("Size should be three", 3, list.size())
+    }
+
 
 
 
