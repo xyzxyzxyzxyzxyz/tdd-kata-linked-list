@@ -3,6 +3,7 @@ package com.tdd.katas.linkedlist
 class LinkedList {
 
 
+    private var elements : Array<String?> = arrayOfNulls(10)
     private var size : Int = 0
 
     fun isEmpty(): Boolean {
@@ -14,6 +15,7 @@ class LinkedList {
     }
 
     fun add(element: String) {
+        elements[size] = element
         size++
     }
 
@@ -22,7 +24,13 @@ class LinkedList {
     }
 
     fun contains(element: String): Boolean {
-        return true
+        for (i in 0..size) {
+            if (elements[i] == element) {
+                return true
+            }
+        }
+
+        return false
     }
 
 }
