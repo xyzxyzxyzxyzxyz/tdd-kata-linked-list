@@ -2,6 +2,7 @@ package com.tdd.katas.linkedlist
 
 import org.junit.Test
 import org.junit.Assert.*
+import org.junit.Before
 
 class LinkedListTest {
 
@@ -28,18 +29,20 @@ class LinkedListTest {
         Returns true if this collection contains no elements.
      */
 
+    var list = LinkedList()
+
+    @Before
+    fun setUp() {
+        list = LinkedList()
+    }
 
     @Test
     fun whenCreatedTheLinkedListMustBeEmpty() {
-        val list : LinkedList = LinkedList()
-
         assertTrue("Should be empty", list.isEmpty())
     }
 
     @Test
     fun whenAddingAnElementTheLinkedListShouldNotBeEmpty() {
-        val list : LinkedList = LinkedList()
-
         list.add("one")
 
         assertFalse("Should not be empty", list.isEmpty())
@@ -47,8 +50,6 @@ class LinkedListTest {
 
     @Test
     fun whenAddingAnElementTheSizeShouldNotBeZero() {
-        val list : LinkedList = LinkedList()
-
         list.add("one")
 
         assertEquals("Should not be zero", 1, list.size())
@@ -56,21 +57,15 @@ class LinkedListTest {
 
     @Test
     fun whenCreatedTheLinkedListShouldHaveSizeZero() {
-        val list : LinkedList = LinkedList()
-
         assertEquals("Should be zero", 0, list.size())
     }
 
     @Test
     fun whenTheListIsClearedTheSizeMustBeZero() {
-        val list : LinkedList = LinkedList()
-
         list.add("one")
         list.clear()
 
         assertEquals("Should be zero", 0, list.size())
     }
-
-
 
 }
