@@ -106,6 +106,15 @@ class LinkedListTest {
         assertTrue("Should return true", list.remove("two"))
     }
 
+    @Test
+    fun whenRemovingANonExistingElementTheRemoveMethodReturnsFalse() {
+        list.add("two")
+
+        assertFalse("Should return false", list.remove("one"))
+    }
+
+
+
     /*
     @Test
     fun whenRemovingAnExistingElementTheSizeIsDecreased() {
