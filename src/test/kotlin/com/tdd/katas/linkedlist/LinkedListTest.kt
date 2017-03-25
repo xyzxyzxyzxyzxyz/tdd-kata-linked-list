@@ -46,6 +46,15 @@ class LinkedListTest {
     }
 
     @Test
+    fun whenAddingAnElementTheSizeShouldNotBeZero() {
+        val list : LinkedList = LinkedList()
+
+        list.add("one")
+
+        assertEquals("Should not be zero", 1, list.size())
+    }
+
+    @Test
     fun whenCreatedTheLinkedListShouldHaveSizeZero() {
         val list : LinkedList = LinkedList()
 
