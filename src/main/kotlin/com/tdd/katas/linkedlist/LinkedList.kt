@@ -7,6 +7,6 @@ class LinkedList {
     }
 
     fun  size(): Int {
-        return -1
+        return 0
     }
 }
