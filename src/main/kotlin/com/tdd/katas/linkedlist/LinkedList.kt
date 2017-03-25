@@ -52,13 +52,7 @@ class LinkedList {
     }
 
     fun contains(element: String): Boolean {
-        for (i in 0 .. size-1) {
-            if (elements[i]!=null && elements[i]!!.value == element) {
-                return true
-            }
-        }
-
-        return false
+        return indexOf(element) != -1
     }
 
 
