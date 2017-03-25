@@ -74,4 +74,8 @@ class LinkedList {
         var next : Int? = null
     }
 
+    fun remove(element: String): Boolean {
+        return false
+    }
+
 }

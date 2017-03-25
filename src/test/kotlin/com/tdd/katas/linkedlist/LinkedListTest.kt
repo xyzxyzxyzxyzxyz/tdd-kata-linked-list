@@ -90,8 +90,6 @@ class LinkedListTest {
         assertFalse("Should not contain two", list.contains("two"))
     }
 
-
-    /*
     @Test
     fun whenAddingTwoElementsTheyMustBeContainedInTheList() {
         list.add("one")
@@ -100,7 +98,26 @@ class LinkedListTest {
         assertTrue("Should contain one", list.contains("one"))
         assertTrue("Should contain two", list.contains("two"))
     }
+
+    @Test
+    fun whenRemovingAnExistingElementTheRemoveMethodReturnsTrue() {
+        list.add("two")
+
+        assertTrue("Should return true", list.remove("two"))
+    }
+
+    /*
+    @Test
+    fun whenRemovingAnExistingElementTheSizeIsDecreased() {
+        list.add("one")
+        list.add("two")
+        list.add("three")
+
+        assertEquals("Size should be two", 2, list.size())
+    }
     */
+
+
 
 
 }
