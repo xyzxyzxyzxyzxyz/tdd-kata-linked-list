@@ -75,8 +75,13 @@ class LinkedList {
     }
 
     fun remove(element: String): Boolean {
-        size--
-        return contains(element)
+        val contains = contains(element)
+
+        if (contains) {
+            size--
+        }
+
+        return contains
     }
 
 
