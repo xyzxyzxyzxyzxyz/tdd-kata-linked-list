@@ -22,7 +22,7 @@ class LinkedList {
     }
 
     fun contains(element: String): Boolean {
-        return false
+        return true
     }
 
 }
