@@ -135,6 +135,16 @@ class LinkedListTest {
         assertEquals("Size should be three", 3, list.size())
     }
 
+    @Test
+    fun afterRemovingAUniqueElementItIsNotContainedAnymore() {
+        list.add("one")
+        list.add("two")
+        list.add("three")
+
+        list.remove("two")
+
+        assertFalse("Size should be two", list.contains("two"))
+    }
 
 
 
