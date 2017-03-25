@@ -76,4 +76,11 @@ class LinkedListTest {
         assertTrue("Should be empty", list.isEmpty())
     }
 
+    @Test
+    fun whenAddingAnElementItMustBeContainedInTheList() {
+        list.add("one")
+
+        assertTrue("Should contain one", list.contains("one"))
+    }
+
 }
