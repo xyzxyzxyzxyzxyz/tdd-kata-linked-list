@@ -68,4 +68,12 @@ class LinkedListTest {
         assertEquals("Should be zero", 0, list.size())
     }
 
+    @Test
+    fun whenTheListIsClearedItMustBeEmpty() {
+        list.add("one")
+        list.clear()
+
+        assertTrue("Should be empty", list.isEmpty())
+    }
+
 }
