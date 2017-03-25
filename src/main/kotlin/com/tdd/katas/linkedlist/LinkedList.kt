@@ -17,4 +17,7 @@ class LinkedList {
         size++
     }
 
+    fun clear() {
+    }
+
 }

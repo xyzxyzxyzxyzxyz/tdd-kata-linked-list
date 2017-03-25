@@ -61,6 +61,16 @@ class LinkedListTest {
         assertEquals("Should be zero", 0, list.size())
     }
 
+    @Test
+    fun whenTheListIsClearedTheSizeMustBeZero() {
+        val list : LinkedList = LinkedList()
+
+        list.add("one")
+        list.clear()
+
+        assertEquals("Should be zero", 0, list.size())
+    }
+
 
 
 }
